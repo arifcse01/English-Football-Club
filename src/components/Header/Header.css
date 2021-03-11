@@ -2,9 +2,7 @@
     background-image: url("../../image/football-ground.jpg");
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: 100% auto;
-    margin-top: 0;  
-    margin-bottom: 0; 
+    background-size: cover; 
 }
 
 .banner h1{

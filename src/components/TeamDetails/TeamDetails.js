@@ -9,7 +9,7 @@ import femaleImage from '../../image/female.png';
 const TeamDetails = () => {
     const {teamId} = useParams();
     const [teamDetails, setTeamDetails] = useState([]);
-    const {strAlternate, strTeamBadge, strCountry, strGender, strSport, strLeague, strDescriptionEN, strDescriptionES, strFacebook, strYoutube, strTwitter} = teamDetails;
+    const {strAlternate, strTeamBadge, strCountry, strGender, strTeamBanner, strSport, strLeague, strDescriptionEN, strDescriptionES, strFacebook, strYoutube, strTwitter} = teamDetails;
     
     useEffect(() =>{
         const url = `https://www.thesportsdb.com/api/v1/json/1/lookupteam.php?id=${teamId}`;
@@ -25,8 +25,7 @@ const TeamDetails = () => {
 
     const teamLogo ={
         width: "150px",
-        marginTop: "100px",
-        marginBottom: "75px",
+        margin: "70px auto"
     }
 
     const teamInfo = {
@@ -41,13 +40,21 @@ const TeamDetails = () => {
     }
 
     const icons = {
-        width: '70px',        
-        margin: '20px 10px'
+        width: '50px',
+        marginRight: '15px',
+        paddingBottom: '20px'    
+    }
+
+    const banner = {
+        backgroundImage: `url(${strTeamBanner})`,
+        backgroundPosition: 'center',
+        backgroundSize: '100% 100%',
+        backgroundRepeat: 'no-repeat'
     }
     
     return (
         <div>            
-            <div className="banner">
+            <div style={banner}>
                 <img style={teamLogo} src={strTeamBadge} alt=""/>
             </div>
             <div className="container">
