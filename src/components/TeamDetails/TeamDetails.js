@@ -55,7 +55,7 @@ const TeamDetails = () => {
                     <div className="col-12 col-md-7 col-sm-12  pt-3 mt-sm-3 mt-md-4 ">
                         <h2 style={{fontSize:"40px"}}> {strAlternate}</h2>
                         <p>Country : {strCountry}</p>
-                        <p>Sport Type : {strSport}</p>
+                        <p>Sports Type : {strSport}</p>
                         <p>{strLeague}</p>
                         <p>Gender : {strGender}</p>
                     </div>
