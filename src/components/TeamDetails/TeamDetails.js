@@ -9,7 +9,7 @@ import femaleImage from '../../image/female.png';
 const TeamDetails = () => {
     const {teamId} = useParams();
     const [teamDetails, setTeamDetails] = useState([]);
-    const {strAlternate, strTeamBadge, strCountry, strGender, strTeamBanner, strSport, strLeague, strDescriptionEN, strDescriptionES, strFacebook, strYoutube, strTwitter} = teamDetails;
+    const {strTeamBadge, strCountry, strGender, strTeamBanner, strAlternate, strSport, strLeague, strDescriptionEN, strDescriptionES, strFacebook, strYoutube, strTwitter} = teamDetails;
     
     useEffect(() =>{
         const url = `https://www.thesportsdb.com/api/v1/json/1/lookupteam.php?id=${teamId}`;
@@ -40,7 +40,7 @@ const TeamDetails = () => {
     }
 
     const icons = {
-        width: '50px',
+        width: '40px',
         marginRight: '15px',
         paddingBottom: '20px'    
     }
