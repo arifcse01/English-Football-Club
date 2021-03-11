@@ -20,8 +20,8 @@ import femaleImage from '../../image/female.png';
 const TeamDetails = () => {
     const {teamId} = useParams();
     const [teamDetails, setTeamDetails] = useState([]);
-    const {strTeam, strTeamBadge, strCountry, strGender, strSport, strLeague, strFacebook, strYoutube, strTwitter} = teamDetails;
-    
+    const {strAlternate, strTeamBadge, strCountry, strGender, strSport, strLeague, strDescriptionEN, strDescriptionES, strFacebook, strYoutube, strTwitter} = teamDetails;
+    console.log(teamDetails)
     useEffect(() =>{
         const url = `https://www.thesportsdb.com/api/v1/json/1/lookupteam.php?id=${teamId}`;
         fetch(url)
@@ -47,7 +47,8 @@ const TeamDetails = () => {
         borderRadius: "10px",
         paddingLeft: "20px",
         color: "#f5f5f5af",
-        fontSize: "20px"
+        fontSize: "20px",
+        margin: "auto 5px"
     }
 
     const icons = {
@@ -61,15 +62,15 @@ const TeamDetails = () => {
                 <img style={teamLogo} src={strTeamBadge} alt=""/>
             </div>
             <div className="container">
-                <div style={teamInfo} className="row mt-4 pt-4 pb-3">
-                    <div className="col-md-7 col-sm pt-3">
-                        <h2 style={{fontSize:"40px"}}> {strTeam}</h2>
+                <div style={teamInfo} className="row mt-3">
+                    <div className="col-12 col-md-7 col-sm-12  pt-3 mt-sm-3 mt-md-4 ">
+                        <h2 style={{fontSize:"40px"}}> {strAlternate}</h2>
                         <p>Country : {strCountry}</p>
                         <p>Sport Type : {strSport}</p>
                         <p>{strLeague}</p>
                         <p>Gender : {strGender}</p>
                     </div>
-                    <div className="col-md-5 col-sm">
+                    <div className="col-12 col-sm-12 col-md-5 mt-md-4 mt-4">
                         {
                             strGender ? <img className="w-100 mb-3 " src={maleImage} alt=""/> : <img className="w-100 mb-3 " src={femaleImage} alt=""/>
                         }
@@ -77,9 +78,9 @@ const TeamDetails = () => {
                 </div>
 
                 <div style={{padding:"15px 0", textAlign:"justify", color:"#f5f5f5af"}}>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum nulla natus vitae repellat quasi quos numquam accusantium. Quisquam sed libero veritatis? Minus, architecto earum iure saepe dolorem provident quae, reprehenderit est tempora ratione consequuntur et nulla. Amet explicabo, nostrum velit sint omnis fuga laborum expedita libero, pariatur magnam quia sapiente impedit harum. Qui laudantium aliquid debitis nam obcaecati totam quisquam explicabo illum accusamus vero ex libero ab nobis perferendis eos magnam facere, voluptatibus velit culpa.</p>
+                    <p>{strDescriptionEN}</p>
                     <br/>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, cupiditate. Incidunt expedita error laboriosam. Quibusdam aliquid tempore excepturi? Tenetur nam, doloribus ipsa quae sunt consequatur esse saepe fuga maxime? Aperiam aspernatur perferendis iure quam laudantium eius nisi veritatis id deleniti.</p>
+                    <p>{strDescriptionES}</p>
                 </div>
 
                 <div>
