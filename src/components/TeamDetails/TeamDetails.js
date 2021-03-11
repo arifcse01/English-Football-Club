@@ -6,22 +6,11 @@ import youtube from '../../icons/YouTube.png';
 import maleImage from '../../image/male.png';
 import femaleImage from '../../image/female.png';
 
-
-// export default function TeamDetails() {
-//     const { pathname } = useLocation();
-
-//     useEffect(() => {
-//     window.scrollTo(0, 0);
-//   }, [pathname]);
-
-//   return null;
-// }
-
 const TeamDetails = () => {
     const {teamId} = useParams();
     const [teamDetails, setTeamDetails] = useState([]);
     const {strAlternate, strTeamBadge, strCountry, strGender, strSport, strLeague, strDescriptionEN, strDescriptionES, strFacebook, strYoutube, strTwitter} = teamDetails;
-    console.log(teamDetails)
+    
     useEffect(() =>{
         const url = `https://www.thesportsdb.com/api/v1/json/1/lookupteam.php?id=${teamId}`;
         fetch(url)
