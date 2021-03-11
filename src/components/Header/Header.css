@@ -1,0 +1,15 @@
+.banner{
+    background-image: url("../../image/football-ground.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% auto;
+    margin-top: 0;  
+    padding-top: 0;  
+}
+
+.banner h1{
+    color: rgb(170, 243, 53);   
+    padding: 120px 0;
+    font-weight: 700;
+    text-transform: uppercase;
+}

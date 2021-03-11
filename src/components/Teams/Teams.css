@@ -1,0 +1,13 @@
+.teams img{
+    width: 150px;
+    background: lightgray;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.teams{    
+    border: 1px solid yellow;
+    border-radius: 10px;
+    box-shadow: 20px 20px 15px purple;
+    background: white;
+    padding: 20px;
+}
