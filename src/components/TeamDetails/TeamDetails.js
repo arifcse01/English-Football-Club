@@ -1,11 +1,21 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router';
+import { useLocation, useParams } from 'react-router';
 import facebook from '../../icons/Facebook.png';
 import twitter from '../../icons/Twitter.png';
 import youtube from '../../icons/YouTube.png';
 import maleImage from '../../image/male.png';
 import femaleImage from '../../image/female.png';
-import { Link } from 'react-router-dom';
+
+
+// export default function TeamDetails() {
+//     const { pathname } = useLocation();
+
+//     useEffect(() => {
+//     window.scrollTo(0, 0);
+//   }, [pathname]);
+
+//   return null;
+// }
 
 const TeamDetails = () => {
     const {teamId} = useParams();
@@ -18,6 +28,11 @@ const TeamDetails = () => {
         .then(res => res.json())
         .then(data => setTeamDetails(data.teams[0]))
     },[teamId]);
+
+    const { pathname } = useLocation();    
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, [pathname]);    
 
     const teamLogo ={
         width: "150px",
@@ -68,9 +83,9 @@ const TeamDetails = () => {
                 </div>
 
                 <div>
-                    <span><a href={"https://" + strFacebook}><img style={icons} src={facebook} alt=""/></a></span>
-                    <span><a href={"https://" + strTwitter}><img style={icons} src={twitter} alt=""/></a></span>   
-                    <span><a href={"https://" + strYoutube}><img style={icons} src={youtube} alt=""/></a></span>                                    
+                    <span><a href={"https://" + strFacebook} target="_blank"><img style={icons} src={facebook} alt=""/></a></span>
+                    <span><a href={"https://" + strTwitter} target="_blank"><img style={icons} src={twitter} alt=""/></a></span>   
+                    <span><a href={"https://" + strYoutube} target="_blank"><img style={icons} src={youtube} alt=""/></a></span>                                    
                 </div>
             </div>
         </div>

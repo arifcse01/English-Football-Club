@@ -10,6 +10,8 @@ import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import TeamDetails from './components/TeamDetails/TeamDetails';
 import NotFound from './components/NotFound/NotFound';
+
+
 function App() {
   return (
     <div className="App">
