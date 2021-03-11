@@ -9,6 +9,7 @@ const Home = () => {
         .then(res => res.json())
         .then(data => setTeams(data.teams))
     }, [])
+    
     return (
         <div className="container">
             <div className="row">

@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import {
@@ -30,7 +29,6 @@ function App() {
           <Route path="*">
             <NotFound></NotFound>
           </Route>
-
         </Switch>
       </Router>
     </div>

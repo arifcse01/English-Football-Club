@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import facebook from '../../icons/Facebook.png';
-import tweeter from '../../icons/Twitter.png';
+import twitter from '../../icons/Twitter.png';
 import youtube from '../../icons/YouTube.png';
 import maleImage from '../../image/male.png';
 import femaleImage from '../../image/female.png';
 import { Link } from 'react-router-dom';
 
-const TeamDetails = (props) => {
+const TeamDetails = () => {
     const {teamId} = useParams();
     const [teamDetails, setTeamDetails] = useState([]);
     const {strTeam, strTeamBadge, strCountry, strGender, strSport, strLeague, strFacebook, strYoutube, strTwitter} = teamDetails;
-    // console.log(team);
+    
     useEffect(() =>{
         const url = `https://www.thesportsdb.com/api/v1/json/1/lookupteam.php?id=${teamId}`;
         fetch(url)
@@ -69,7 +69,7 @@ const TeamDetails = (props) => {
 
                 <div>
                     <span><a href={"https://" + strFacebook}><img style={icons} src={facebook} alt=""/></a></span>
-                    <span><a href={"https://" + strTwitter}><img style={icons} src={tweeter} alt=""/></a></span>   
+                    <span><a href={"https://" + strTwitter}><img style={icons} src={twitter} alt=""/></a></span>   
                     <span><a href={"https://" + strYoutube}><img style={icons} src={youtube} alt=""/></a></span>                                    
                 </div>
             </div>
