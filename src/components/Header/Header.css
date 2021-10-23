@@ -3,6 +3,7 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover; 
+    margin-bottom: 0;
 }
 
 .banner h1{
@@ -10,4 +11,5 @@
     padding: 120px 0;
     font-weight: 700;
     text-transform: uppercase;
+    text-align: center;
 }

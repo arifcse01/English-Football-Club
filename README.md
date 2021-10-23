@@ -1,4 +1,4 @@
-Project Name: English Premier League
+Project Name: English Football Club
 
 Features: 
 1. Banner

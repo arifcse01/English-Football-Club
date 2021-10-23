@@ -10,6 +10,7 @@ import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import TeamDetails from './components/TeamDetails/TeamDetails';
 import NotFound from './components/NotFound/NotFound';
+import Footer from './components/Footer/Footer';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path="/home">
             <Header></Header>
             <Home></Home>
+            <Footer />
           </Route>
           <Route path="/team/:teamId">
             <TeamDetails></TeamDetails>
@@ -27,6 +29,7 @@ function App() {
           <Route exact path="/">
             <Header></Header>
             <Home></Home>
+            <Footer />
           </Route>
           <Route path="*">
             <NotFound></NotFound>

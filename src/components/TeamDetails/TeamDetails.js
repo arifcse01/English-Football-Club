@@ -79,10 +79,10 @@ const TeamDetails = () => {
                     <p>{strDescriptionES}</p>
                 </div>
 
-                <div>
+                <div className="text-center">
                     <span><a href={"https://" + strFacebook} target="_blank"><img style={icons} src={facebook} alt=""/></a></span>
                     <span><a href={"https://" + strTwitter} target="_blank"><img style={icons} src={twitter} alt=""/></a></span>   
-                    <span><a href={"https://" + strYoutube} target="_blank"><img style={icons} src={youtube} alt=""/></a></span>                                    
+                    <span><a href={"https://" + strYoutube} target="_blank"><img style={icons} src={youtube} alt=""/></a></span>                                  
                 </div>
             </div>
         </div>
